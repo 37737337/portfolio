@@ -3,118 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Никита | Разработка ботов и сайтов</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Никита | Backend Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="navbar">
-        <div class="container flex-header">
-            <div class="logo">N<span>IKITA</span></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#skills">Навыки</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                    <li><a href="https://github.com/37737337" target="_blank" class="github-link">GitHub</a></li>
-                </ul>
-            </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Никита</h1>
+            <h2>Backend Developer Intern / Python</h2>
+            <p class="subtitle">Санкт-Петербург | Хекслет Колледж</p>
+            <p class="description">Мне интересно не просто писать код, а понимать, как работают системы изнутри. Специализируюсь на бэкенд-разработке, архитектуре Linux и информационной безопасности.</p>
+            <div class="links">
+                <a href="https://github.com/37737337" target="_blank" class="btn">GitHub</a>
+                <a href="https://t.me/craftingcode" target="_blank" class="btn btn-outline">Telegram</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-text">
-                        <h1>Никита <span>Web & Python Dev</span></h1>
-                        <p>Студент Hexlet College. Создаю автоматизированные решения на Python и занимаюсь современной веб-версткой.</p>
-                        <a href="#projects" class="btn">Мои работы</a>
-                    </div>
+    <section class="skills container">
+        <h3>Стек технологий</h3>
+        <div class="tags">
+            <span>Python</span>
+            <span>Java</span>
+            <span>Linux</span>
+            <span>Docker</span>
+            <span>SQL</span>
+            <span>Git</span>
+            <span>HTML/CSS</span>
+        </div>
+    </section>
+
+    <section class="projects container">
+        <h3>Мои проекты</h3>
+        <div class="grid">
+            <!-- Проект 1 -->
+            <div class="card">
+                <h4>NetStress API</h4>
+                <p>Микросервис на Python/FastAPI для нагрузочного тестирования. Выполняет системные вызовы Linux (wrk) для анализа пропускной способности. Упакован в Docker.</p>
+                <div class="card-tags">
+                    <span>Python</span><span>FastAPI</span><span>Docker</span>
                 </div>
+                <a href="https://github.com/37737337/netstress-api/tree/main/netstress-api" target="_blank" class="card-link">Смотреть код →</a>
             </div>
-        </section>
-
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="text-center">Что я умею</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-label">Frontend</div>
-                        <p>Верстка на HTML5 и CSS3. Создание адаптивных сайтов (Flexbox, Grid), которые корректно отображаются на телефонах.</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-label">Backend</div>
-                        <p>Разработка ботов на Python (библиотека aiogram). Работа с API Telegram и автоматизация задач.</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-label">Data</div>
-                        <p>Парсинг сайтов с помощью BeautifulSoup4. Извлечение нужной информации из веб-страниц в автоматическом режиме.</p>
-                    </div>
+            
+            <!-- Проект 2 -->
+            <div class="card">
+                <h4>Java PortScanner</h4>
+                <p>Многопоточный сканер портов на чистой Java. Реализован захват баннеров (Banner Grabbing) для определения сетевых служб. Удобный CLI-интерфейс.</p>
+                <div class="card-tags">
+                    <span>Java</span><span>Multithreading</span><span>TCP/IP</span>
                 </div>
+                <a href="https://github.com/37737337/scan-port" class="card-link">Смотреть код →</a>
             </div>
-        </section>
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="text-center">Портфолио проектов</h2>
-                <div class="projects-grid">
-                    
-                    <div class="project-card">
-                        <div class="img-container site-preview">
-                            <span>WEB</span>
-                        </div>
-                        <div class="p-4">
-                            <h3>Сайт-портфолио</h3>
-                            <p>Мой личный сайт, созданный для презентации проектов. Здесь я использовал современные CSS-эффекты размытия и сетки для выравнивания контента.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="img-container"><img src="img/schedule.png" alt="Schedule"></div>
-                        <div class="p-4">
-                            <h3>Бот с расписанием</h3>
-                            <p>Бот на Python, который сам заходит на сайт колледжа (парсинг), забирает расписание и присылает его в чат. Умеет уведомлять об изменениях.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="img-container"><img src="img/diary.png" alt="Diary"></div>
-                        <div class="p-4">
-                            <h3>Бот-дневник</h3>
-                            <p>Система для просмотра оценок. Реализована логика для учеников и учителей, чтобы удобно следить за успеваемостью через Telegram.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="img-container"><img src="img/tagger.png" alt="Tagger"></div>
-                        <div class="p-4">
-                            <h3>Бот-тегер</h3>
-                            <p>Утилита для быстрого упоминания людей в группах. Позволяет не забыть никого при важных объявлениях в учебных чатах.</p>
-                        </div>
-                    </div>
-
+            
+            <!-- Проект 3 -->
+            <div class="card">
+                <h4>Бот-парсер расписания</h4>
+                <p>Telegram-бот для мониторинга изменений в расписании. Автоматически отслеживает официальный сайт, парсит данные и мгновенно рассылает уведомления пользователям при обновлении.</p>
+                <div class="card-tags">
+                    <span>Python</span><span>Parsing</span><span>BeautifulSoup</span><span>Asyncio</span>
                 </div>
+                <a href="https://github.com/37737337/schedule-bot" class="card-link">Смотреть код →</a>
             </div>
-        </section>
 
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="contact-card">
-                    <h2 class="text-center">Связь</h2>
-                    <div class="contact-info">
-                        <p>Почта: <strong>nktsbog@gmail.com</strong></p>
-                        <p>GitHub: <a href="https://github.com/37737337" target="_blank">37737337</a></p>
-                    </div>
+            <!-- Проект 4 -->
+            <div class="card">
+                <h4>Электронный дневник (с ролями)</h4>
+                <p>Сложная система управления учебным процессом в Telegram. Реализована строгая ролевая модель доступа (Администратор / Учитель / Ученик) и управление оценками через базу данных.</p>
+                <div class="card-tags">
+                    <span>Python</span><span>aiogram</span><span>SQL</span><span>RBAC</span>
                 </div>
+                <a href="https://github.com/37737337/education-system-bot" class="card-link">Смотреть код →</a>
             </div>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Никита. Студент Hexlet College.</p>
+            <!-- Проект 5 -->
+            <div class="card">
+                <h4>Cloud & Transfer Bot</h4>
+                <p>Telegram-бот для безопасного хранения и передачи приватных файлов. Реализована система маршрутизации внутренних потоков данных и управление правами доступа.</p>
+                <div class="card-tags">
+                    <span>Python</span><span>aiogram</span><span>File ID</span>
+                </div>
+                <a href="https://github.com/37737337/oblako-transfiles" class="card-link">Смотреть код →</a>
+            </div>
+
+            <!-- Проект 6 -->
+            <div class="card">
+                <h4>Admin Tagger Bot</h4>
+                <p>Утилита для модерации групповых чатов. Позволяет экстренно призывать администраторов порциями, учитывая лимиты Telegram, защиту от спама (кулдауны) и рабочее время.</p>
+                <div class="card-tags">
+                    <span>Python</span><span>aiogram</span><span>Optimization</span>
+                </div>
+                <a href="https://github.com/37737337/Tg-teg-bot" class="card-link">Смотреть код →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <p>© 2026 Никита. Backend Developer.</p>
     </footer>
-
 </body>
 </html>
